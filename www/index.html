@@ -9,37 +9,39 @@
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     
-    <link rel="stylesheet" type="text/css" href="http://mobile.wm4pr.com/Content/Scuro.min.css"/>
-    <link rel="stylesheet" type="text/css" href="http://mobile.wm4pr.com/Content/jquery.mobile.structure-1.3.0.min.css" />
-    <link rel="stylesheet" type="text/css" href="http://mobile.wm4pr.com/Content/Mobile.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/Scuro.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/jquery.mobile.structure-1.3.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/Mobile.css" />
 
+  <!-- Scommentare per l'embed su device
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript">
-      // <!--
 			document.addEventListener("deviceready", function() {
-				navigator.splashscreen.hide();
 				if (navigator.connection.type == Connection.NONE)
 					location.href = "no_connection.html";
 			}, false);
-      // -->
     </script>
-    <script type="text/javascript" src="http://mobile.wm4pr.com/Scripts/jquery-1.10.0.min.js"></script>
-    <script type="text/javascript" src="http://mobile.wm4pr.com/Scripts/MobileGlobals.js"></script>
-    <script type="text/javascript" src="http://mobile.wm4pr.com/Scripts/jquery.mobile-1.3.0.min.js"></script>
-    <script type="text/javascript" src="http://mobile.wm4pr.com/Scripts/PreSettings.js"></script>
-    <script type="text/javascript" src="http://mobile.wm4pr.com/Scripts/MobileEngine.js"></script>
-    <script type="text/javascript" src="http://mobile.wm4pr.com/Scripts/klass.min.js" defer="defer"></script>
-    <script type="text/javascript" src="http://mobile.wm4pr.com/Scripts/code.photoswipe.jquery-3.0.5.min.js" defer="defer"></script>
+  -->
+    <script type="text/javascript" src="/Scripts/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="/Scripts/MobileGlobals.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.mobile-1.3.0.min.js"></script>
+    <script type="text/javascript" src="/Scripts/PreSettings.js"></script>
+    <script type="text/javascript" src="/Scripts/MobileEngine.js"></script>
+    <script type="text/javascript" src="/Scripts/klass.min.js" defer="defer"></script>
+    <script type="text/javascript" src="/Scripts/code.photoswipe.jquery-3.0.5.min.js" defer="defer"></script>
+    <script>
+	    
+    </script>
 </head>
-<body data-tp="109330" data-db="prod">
+<body data-tp="@ViewBag.tpID" data-db="prod">
     <div id="fb-root"></div>
     <div data-role="page" id="foo">
-        <header data-role="header" id="header" data-position="fixed">
+        <header data-role="header" id="header" data-position="fixed" >
             <a href="#panelleft" id="buttonleft" data-iconpos="notext" data-icon="search"
-                data-corners="true" data-shadow="true" style="position:absolute"></a>
+                data-corners="false" data-shadow="false" data-iconshadow="false" style="position:absolute" ></a>
             <h1 class="ui-title"></h1>
-            <a href="#panelright" id="buttonright" data-iconpos="notext"
-                data-icon="bars" data-corners="true" data-shadow="true"></a>
+            <a href="#panelright" target="_blank" class="getAmbientByShop" id="buttonright" data-iconpos="notext"
+                data-icon="bars" data-corners="false" data-iconshadow="false" data-shadow="false"></a>
         </header>
 
         <aside data-role="panel" id="panelleft" data-theme="a">
@@ -52,7 +54,28 @@
         </aside>
 
         <footer data-role="footer" id="footer" class="fullTextBar">
-            
+            <!--<table>
+                <tr>
+                    <td>
+                        <input type="search" name="fulltext" id="search" value="" data-mini="true"
+                        placeholder="Cerca..." onkeydown="tp.FullTextSearchEnterPressed(this)">
+                    </td>
+                    <td>
+                        <a href="javascript:tp.FullTextSearchButtonPressed('search')" data-role="button"
+                        data-icon="search" data-iconpos="notext">Search</a>
+                    </td>
+                </tr>
+            </table>
+            <!--div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <input type="search" name="fulltext" id="search" value="" data-mini="true"
+                    placeholder="Cerca..." onkeydown="tp.FullTextSearch(this)">
+                </div>
+                <div class="ui-block-b">
+                    <a href="tp.FullTextSearch(this)" data-role="button"
+                    data-icon="search" data-iconpos="notext">Search</a>
+                </div>
+            </div-->
         </footer>
     </div>
 
@@ -85,6 +108,19 @@
                     </td>
                 </tr>
             </table>
+            <!--div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <input type="search" name="fulltext" id="search2" data-mini="true"
+                    value="" placeholder="Cerca..." onkeydown="tp.FullTextSearch(this)">
+                </div>
+                <div class="ui-block-b">
+                    <a href="tp.FullTextSearch(this)" data-role="button"
+                    data-icon="search" data-iconpos="notext">Search</a>
+                </div>
+                <div  class="ui-block-c">
+                    <a data-iconpos="notext" data-role="button" data-icon="delete" data-rel="back"></a>
+                </div>
+            </div-->
         </header>
 
 	    <section data-role="content" id="fullTextContent">
